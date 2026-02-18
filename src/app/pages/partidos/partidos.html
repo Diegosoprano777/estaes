@@ -1,0 +1,21 @@
+<section class="partidos-container">
+
+  <h2 class="titulo">PARTIDOS HOY</h2>
+
+  <div class="partido" *ngFor="let p of partidos">
+
+    <!-- Barra azul equipos -->
+    <div class="equipos">
+      <span class="equipo">{{p.local}}</span>
+      <span class="vs">vs</span>
+      <span class="equipo">{{p.visitante}}</span>
+    </div>
+
+    <!-- Barra negra info -->
+    <div class="info">
+      HORA {{p.hora}}  ESTADIO {{p.estadio}}
+    </div>
+
+  </div>
+
+</section>

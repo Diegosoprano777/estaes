@@ -1,0 +1,29 @@
+<section class="inicio">
+
+  <!-- BANNER -->
+  <div class="banner">
+    BIENVENIDO AL MEJOR DEPORTE QUE NOS UNE
+  </div>
+
+  <!-- CAROUSEL -->
+  <div class="carousel-container">
+
+    <button class="arrow left" (click)="anterior()">
+      &#10094;
+    </button>
+
+    <div class="image-wrapper">
+      <img [src]="imagenes[indiceActual]" alt="Futbol">
+
+      <div class="play-button">
+        ▶
+      </div>
+    </div>
+
+    <button class="arrow right" (click)="siguiente()">
+      &#10095;
+    </button>
+
+  </div>
+
+</section>

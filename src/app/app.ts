@@ -5,14 +5,14 @@ import { FooterComponent } from './shared/components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  standalone: true, 
+  standalone: true,
   imports: [
     RouterOutlet,
     HeaderComponent,
     FooterComponent
   ],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class App {
   protected readonly title = signal('futbolito');

@@ -1,0 +1,21 @@
+<main class="container">
+
+  <div class="news-grid">
+
+    <div class="card" *ngFor="let n of noticias">
+
+      <div class="image-wrapper">
+        <img [src]="n.imagen" alt="noticia">
+      </div>
+
+      <div class="info">
+        <h3>{{ n.titulo }}</h3>
+        <p>{{ n.descripcion }}</p>
+        <button class="btn-news">NOTICIA</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
