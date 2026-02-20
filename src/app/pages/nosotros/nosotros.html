@@ -1,34 +1,91 @@
-<section class="nosotros-container">
+<div class="nosotros-container text-center">
 
-  <div class="contenido">
-
-    <!-- Imagen -->
-    <div class="imagen">
-      <img src="assets/img/nosotros.jpg" alt="Futbol Sin Rostro">
-    </div>
-
-    <!-- Texto -->
-    <div class="texto">
-      <p>
-        <strong>Futbol Sin Rostro</strong> es un espacio dedicado a los verdaderos amantes del fútbol,
-        donde lo más importante no son los nombres ni la fama, sino el juego, la pasión
-        y lo que pasa dentro de la cancha.
-
-        Nacimos con la idea de informar y compartir el fútbol de manera directa, clara
-        y sin máscaras.
-
-        En nuestra página encontrarás noticias actualizadas, partidos del día,
-        resultados, datos relevantes y todo lo que necesitas saber para no perderte nada
-        del mundo del fútbol tanto a nivel nacional como internacional.
-
-        Nuestro objetivo es mantenerte informado en todo momento con contenido rápido,
-        confiable y pensado para el aficionado real.
-
-        Creemos que el fútbol se vive mejor cuando se comparte, por eso Futbol Sin Rostro
-        es una comunidad donde la pasión por el balón nos une.
-      </p>
-    </div>
-
+  <div class="imagen mb-4">
+    <img src="assets/img/nosotros.jpg" class="img-fluid rounded" alt="Maradona">
   </div>
 
-</section>
+  <h2>Fútbol Sin Rostro</h2>
+
+  <p>
+    es un espacio dedicado a los verdaderos amantes del fútbol, donde lo más importante no son los nombres ni la fama,
+    sino el juego, la pasión y lo que pasa dentro de la cancha. Nacimos con la idea de informar y compartir el fútbol de
+    manera directa, clara y sin máscaras. En nuestra página encontrarás noticias actualizadas, partidos del día,
+    resultados, datos relevantes y todo lo que necesitas saber para no perderte nada del mundo del fútbol tanto a nivel
+    nacional como internacional
+  </p>
+
+  <!-- BOTÓN ABRIR MODAL -->
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactoModal">
+    Abrir Formulario
+  </button>
+
+</div>
+
+<!-- MODAL BOOTSTRAP -->
+<div class="modal fade" id="contactoModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Formulario de Contacto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- FORMULARIO ANGULAR -->
+        <form #formContacto="ngForm">
+
+          <!-- NOMBRE -->
+          <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" [(ngModel)]="formulario.nombre" #nombre="ngModel"
+              required>
+
+            <div class="text-danger" *ngIf="nombre.invalid && nombre.touched">
+              Debes ingresar tu nombre
+            </div>
+          </div>
+
+          <!-- CORREO -->
+          <div class="mb-3">
+            <label class="form-label">Correo</label>
+            <input type="email" class="form-control" name="correo" [(ngModel)]="formulario.correo" #correo="ngModel"
+              required email>
+
+            <div class="text-danger" *ngIf="correo.invalid && correo.touched">
+              Ingresa un correo válido
+            </div>
+          </div>
+
+          <!-- MENSAJE -->
+          <div class="mb-3">
+            <label class="form-label">Mensaje</label>
+            <textarea class="form-control" rows="4" name="mensaje" [(ngModel)]="formulario.mensaje" #mensaje="ngModel"
+              required></textarea>
+
+            <div class="text-danger" *ngIf="mensaje.invalid && mensaje.touched">
+              El mensaje es obligatorio
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+
+      <div class="modal-footer">
+
+        <!-- BOTÓN DESCARGAR -->
+        <button class="btn btn-success" [disabled]="formContacto.invalid" (click)="descargarJSON(formContacto)">
+          Descargar JSON
+        </button>
+
+        <button class="btn btn-secondary" data-bs-dismiss="modal">
+          Cerrar
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
