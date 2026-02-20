@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-beasties-container><head>
+export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
   <meta charset="utf-8">
   <title>Futbolito</title>
   <base href="/futbolito/">
@@ -12,4 +12,4 @@
 </footer></app-footer></app-root>
 <script src="scripts-TTWY4XDY.js" defer></script><script src="main-F2UXIQI2.js" type="module"></script>
 
-<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"24":"t0","30":"t1","36":"t2"},"c":{"24":[],"30":[],"36":[]}},{"c":{"2":[{"i":"c2119310579","r":1}]}}]}</script></body></html>
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"24":"t1","30":"t2","36":"t3"},"c":{"24":[],"30":[],"36":[]}},{"c":{"2":[{"i":"c2119310579","r":1}]}}]}</script></body></html>`;

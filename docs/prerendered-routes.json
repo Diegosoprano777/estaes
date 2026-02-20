@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "/futbolito": {},
+    "/futbolito/nosotros": {},
+    "/futbolito/noticias": {},
+    "/futbolito/partidos": {}
+  }
+}
