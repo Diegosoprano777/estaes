@@ -1,0 +1,16 @@
+<div class="contenedor">
+
+  <div class="card" *ngFor="let camisa of listaCamisetas">
+
+    <div class="imagen">
+      <img [src]="camisa.img" alt="camiseta">
+    </div>
+
+    <div class="info">
+      <h3>{{camisa.jugador}}</h3>
+      <p>{{camisa.equipo}}</p>
+    </div>
+
+  </div>
+
+</div>
