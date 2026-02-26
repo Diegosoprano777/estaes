@@ -1,0 +1,44 @@
+<div class="container">
+
+  <header class="header">
+    <h1>JUGADORES</h1>
+    <p>Leyendas que marcaron la historia ⚽</p>
+    <img src="assets/img/jugadores.jpg" alt="Jugadores" class="imagen-header">
+  </header>
+
+  <div class="content">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+      <div class="card ronaldinho" (click)="seleccionarJugador('ronaldinho')">
+        <img src="assets/img/ronaldinho.jpg" alt="Ronaldinho">
+        <span>Ronaldinho</span>
+      </div>
+
+      <div class="card cr7" (click)="seleccionarJugador('cr7')">
+        <img src="assets/img/cr7.jpg" alt="Cristiano Ronaldo">
+        <span>Cristiano Ronaldo</span>
+      </div>
+
+      <div class="card pirlo" (click)="seleccionarJugador('pirlo')">
+        <img src="assets/img/pirlo.jpg" alt="Pirlo">
+        <span>Andrea Pirlo</span>
+      </div>
+
+      <div class="card shaarawy" (click)="seleccionarJugador('shaarawy')">
+        <img src="assets/img/shaarawy.jpg" alt="Shaarawy">
+        <span>Shaarawy</span>
+      </div>
+
+    </div> 
+
+ 
+    <div class="main">
+      <h2>{{ nombre }}</h2>
+      <p>{{ descripcion }}</p>
+    </div>
+
+</div>
+
+</div> 

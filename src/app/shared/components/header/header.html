@@ -4,10 +4,30 @@
   </div>
 
   <nav class="menu">
-    <a routerLink="/">Inicio</a>
-    <a routerLink="/noticias">Noticias</a>
-    <a routerLink="/partidos">Partidos</a>
-    <a routerLink="/nosotros">Nosotros</a>
-    <a routerLink="/camisetas">Camisetas</a>
+    <a routerLink="/" 
+       routerLinkActive="active" 
+       [routerLinkActiveOptions]="{ exact: true }">
+       Inicio
+    </a>
+
+    <a routerLink="/noticias" routerLinkActive="active">
+      Noticias
+    </a>
+
+    <a routerLink="/partidos" routerLinkActive="active">
+      Partidos
+    </a>
+
+    <a routerLink="/nosotros" routerLinkActive="active">
+      Nosotros
+    </a>
+
+    <a routerLink="/camisetas" routerLinkActive="active">
+      Camisetas
+    </a>
+
+    <a routerLink="/jugadores" routerLinkActive="active">
+      Jugadores
+    </a>
   </nav>
 </header>
