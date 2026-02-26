@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CamisetasService } from 'src/app/services/camisetas';
+import { CamisetasService, Camiseta } from 'src/app/services/camisetas';
 
 @Component({
   selector: 'app-camisetas',
@@ -13,6 +13,6 @@ export class CamisetasComponent {
 
   private camisetasService = inject(CamisetasService);
 
-  listaCamisetas = this.camisetasService.obtenerCamisetas();
+  listaCamisetas: Camiseta[] = this.camisetasService.obtenerCamisetas();
 
 }
